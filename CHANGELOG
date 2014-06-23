@@ -1,3 +1,7 @@
+v0.10.0: (forked version)
+  date: 2014-06-07
+  changes:
+    - Forked grunt-contrib-jshint, added JSX conversion support.
 v0.10.0:
   date: 2014-04-02
   changes:
