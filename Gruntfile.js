@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    jshint: {
+    'jshint-jsx': {
       allFiles: [
         'Gruntfile.js',
         'tasks/**/*.js',
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-internal');
 
   // Whenever the "test" task is run, run the "nodeunit" task.
-  grunt.registerTask('test', ['jshint', 'nodeunit']);
+  grunt.registerTask('test', ['jshint-jsx', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['test', 'build-contrib']);

@@ -14,7 +14,7 @@ module.exports = function(grunt) {
   var hooker = require('hooker');
   var jshint = require('./lib/jshint').init(grunt);
 
-  grunt.registerMultiTask('jshint', 'Validate files with JSHint.', function() {
+  grunt.registerMultiTask('jshint-jsx', 'Validate files with JSHint (with JSX support).', function() {
     var done = this.async();
 
     // Merge task-specific and/or target-specific options with these defaults.
