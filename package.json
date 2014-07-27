@@ -1,7 +1,7 @@
 {
   "name": "grunt-contrib-jshint-jsx",
   "description": "Validate files with JSHint (with JSX conversion support).",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "homepage": "https://github.com/jut-io/grunt-contrib-jshint-jsx",
   "author": {
     "name": "Grunt Team (and Jut Team)",
