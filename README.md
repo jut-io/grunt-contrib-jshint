@@ -125,10 +125,12 @@ Specify a filepath to output the results of a reporter. If `reporterOutput` is s
 
 #### convertJSX
 
-Type: `Boolean`  
+Type: `Boolean` or `String`
 Default: `false`
 
 Convert [Facebook React](https://github.com/facebook/react) .jsx files into javascript before calling jshint on them.
+
+By default, only files with the extension `jsx` are converted. By specifying an alternate extension (without leading period -- such as `jsx.js`), those files will be converted instead.
 
 ### Usage examples
 

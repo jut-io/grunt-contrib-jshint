@@ -191,12 +191,19 @@ exports.init = function(grunt) {
     }
 
     var tempFiles = {};
-    if (options.convertJSX === true) {
+    if (options.convertJSX === true || typeof options.convertJSX === 'string') {
+      var JSXextension = '.jsx';
+
+      // Allow overriding of the JSX extension, by passing a string to convertJSX.
+      if (typeof options.convertJSX === 'string') {
+        JSXextension = '.' + options.convertJSX;
+      }
+
       // Convert any jsx files into js files, keeping track of the
       // translation to properly report the original source file and
       // clean up when finished.
       files = grunt.util._.map(files, function(file) {
-        if (path.extname(file) === '.jsx') {
+        if (file.lastIndexOf(JSXextension) === file.length - JSXextension.length) {
           var jsx = grunt.file.read(file);
           try {
             var js = React.transform(jsx);
