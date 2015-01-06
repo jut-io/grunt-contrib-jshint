@@ -163,12 +163,25 @@ exports.jshint = {
     });
   },
   validJSX: function(test) {
-    test.expect(1);
+    test.expect(2);
     var files = [path.join(fixtures, 'valid.jsx')];
     var options = {
       convertJSX: true
     };
     jshint.lint(files, options, function(results, data) {
+      test.equal(data.length, 1, 'Should have linted the file passed to jshint.');
+      test.ok(results.length === 0, 'Should not have reported any errors with supplied .jshintrc');
+      test.done();
+    });
+  },
+  validJSXdotJS: function(test) {
+    test.expect(2);
+    var files = [path.join(fixtures, 'valid.jsx.js')];
+    var options = {
+      convertJSX: 'jsx.js'
+    };
+    jshint.lint(files, options, function(results, data) {
+      test.equal(data.length, 1, 'Should have linted the file passed to jshint.');
       test.ok(results.length === 0, 'Should not have reported any errors with supplied .jshintrc');
       test.done();
     });
