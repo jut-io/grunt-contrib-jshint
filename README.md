@@ -174,7 +174,7 @@ In this example, custom JSHint options are specified. Note that when `grunt jshi
 ```js
 // Project configuration.
 grunt.initConfig({
-  jshint-jsx: {
+  'jshint-jsx': {
     options: {
       curly: true,
       eqeqeq: true,
@@ -210,7 +210,7 @@ You can toggle it by prepending `-` to the warning id as an option:
 
 ```js
 grunt.initConfig({
-  jshint-jsx: {
+  'jshint-jsx': {
     ignore_warning: {
       options: {
         '-W015': true,
