@@ -10,13 +10,13 @@ This plugin requires Grunt `~0.4.0`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-contrib-jshint --save-dev
+npm install grunt-contrib-jshint-jsx --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-contrib-jshint');
+grunt.loadNpmTasks('grunt-contrib-jshint-jsx');
 ```
 
 
@@ -140,16 +140,16 @@ In this example, running `grunt jshint:all` (or `grunt jshint` because `jshint` 
 ```js
 // Project configuration.
 grunt.initConfig({
-  jshint: {
+  'jshint-jsx': {
     all: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js']
   }
 });
 ```
 
 #### Linting before and after concatenating
-In this example, running `grunt jshint` will lint both the "beforeconcat" set and "afterconcat" sets of files. This is not ideal, because `dist/output.js` may get linted before it gets created via the [grunt-contrib-concat plugin](https://github.com/gruntjs/grunt-contrib-concat) `concat` task.
+In this example, running `grunt jshint-jsx` will lint both the "beforeconcat" set and "afterconcat" sets of files. This is not ideal, because `dist/output.js` may get linted before it gets created via the [grunt-contrib-concat plugin](https://github.com/gruntjs/grunt-contrib-concat) `concat` task.
 
-In this case, you should lint the "beforeconcat" files first, then concat, then lint the "afterconcat" files, by running `grunt jshint:beforeconcat concat jshint:afterconcat`.
+In this case, you should lint the "beforeconcat" files first, then concat, then lint the "afterconcat" files, by running `grunt jshint-jsx:beforeconcat concat jshint-jsx:afterconcat`.
 
 ```js
 // Project configuration.
@@ -160,7 +160,7 @@ grunt.initConfig({
       dest: 'dist/output.js'
     }
   },
-  jshint: {
+  'jshint-jsx': {
     beforeconcat: ['src/foo.js', 'src/bar.js'],
     afterconcat: ['dist/output.js']
   }
@@ -169,12 +169,12 @@ grunt.initConfig({
 
 #### Specifying JSHint options and globals
 
-In this example, custom JSHint options are specified. Note that when `grunt jshint:uses_defaults` is run, those files are linted using the default options, but when `grunt jshint:with_overrides` is run, those files are linted using _merged_ task/target options.
+In this example, custom JSHint options are specified. Note that when `grunt jshint-jsx:uses_defaults` is run, those files are linted using the default options, but when `grunt jshint-jsx:with_overrides` is run, those files are linted using _merged_ task/target options.
 
 ```js
 // Project configuration.
 grunt.initConfig({
-  jshint: {
+  jshint-jsx: {
     options: {
       curly: true,
       eqeqeq: true,
@@ -210,7 +210,7 @@ You can toggle it by prepending `-` to the warning id as an option:
 
 ```js
 grunt.initConfig({
-  jshint: {
+  jshint-jsx: {
     ignore_warning: {
       options: {
         '-W015': true,
