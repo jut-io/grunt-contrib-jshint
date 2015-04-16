@@ -1,8 +1,8 @@
 # grunt-contrib-jshint v0.10.3 [![Build Status: Linux](https://travis-ci.org/jut-io/grunt-contrib-jshint-jsx.png?branch=master)](https://travis-ci.org/jut-io/grunt-contrib-jshint-jsx)
 
-> Validate files with JSHint.
+> Validate files with JSHint after optionally converting jsx files.
 
-
+This project is a fork of [https://github.com/gruntjs/grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint) which adds support for on-the-fly conversion of .jsx files into .js files before linting.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
