@@ -23,7 +23,7 @@ grunt.loadNpmTasks('grunt-contrib-jshint-jsx');
 
 
 ## Jshint task
-_Run this task with the `grunt jshint` command._
+_Run this task with the `grunt jshint-jsx` command._
 
 Task targets, files and options may be specified according to the grunt [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.
 
@@ -135,7 +135,7 @@ By default, only files with the extension `jsx` are converted. By specifying an 
 ### Usage examples
 
 #### Wildcards
-In this example, running `grunt jshint:all` (or `grunt jshint` because `jshint` is a [multi task](http://gruntjs.com/configuring-tasks#task-configuration-and-targets)) will lint the project's Gruntfile as well as all JavaScript files in the `lib` and `test` directories and their subdirectores, using the default JSHint options.
+In this example, running `grunt jshint-jsx:all` (or `grunt jshint-jsx` because `jshint` is a [multi task](http://gruntjs.com/configuring-tasks#task-configuration-and-targets)) will lint the project's Gruntfile as well as all JavaScript files in the `lib` and `test` directories and their subdirectores, using the default JSHint options.
 
 ```js
 // Project configuration.
