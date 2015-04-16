@@ -1,3 +1,16 @@
+v0.10.3: (fork)
+  date: 2015-01-05
+  changes:
+    - Update docs to add '-jsx' where missing
+v0.10.2: (fork)
+  date: 2015-01-05
+  changes:
+    - Update to react-tools 0.12
+    - Support configurable extension
+v0.10.1: (fork)
+  date: 2014-07-27
+  changes:
+    - Update to react-tools 0.11.1
 v0.10.0: (forked version)
   date: 2014-06-07
   changes:
