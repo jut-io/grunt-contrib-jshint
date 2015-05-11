@@ -29,7 +29,7 @@
   "dependencies": {
     "hooker": "~0.2.3",
     "jshint": "~2.5.0",
-    "react-tools": "^0.12.2"
+    "react-tools": ">=0.12.x"
   },
   "devDependencies": {
     "grunt-contrib-nodeunit": "~0.3.1",
